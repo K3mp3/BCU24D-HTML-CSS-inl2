@@ -2,6 +2,12 @@
 import { ref } from 'vue'
 
 const isMenu = ref(false)
+const isOpen = ref(false)
+
+function showMobileMenu() {
+  isMenu.value = !isMenu.value
+  isOpen.value = !isOpen.value
+}
 </script>
 
 <template>
@@ -9,12 +15,12 @@ const isMenu = ref(false)
     <div class="nav-hamburger-icon">
       <button
         type="button"
-        @click="() => (isMenu = !isMenu)"
+        @click="showMobileMenu"
         aria-label="Show mobile navigation"
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        <span :class="isOpen && 'top-span'"></span>
+        <span :class="isOpen && 'hide'"></span>
+        <span :class="isOpen && 'bottom-span'"></span>
       </button>
     </div>
     <div class="logo">

@@ -4,99 +4,6 @@ p {
   font-style: normal;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #000;
-  z-index: 1;
-
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-
-  .mobile-nav {
-    display: flex;
-    align-items: center;
-    position: relative;
-    background-color: #000;
-    padding: 1px 0;
-
-    .logo {
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      font-family: 'Jolly Lodger', system-ui;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 2rem;
-    }
-
-    .nav-hamburger-icon {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      z-index: 10;
-
-      button {
-        border: none;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        padding-bottom: 0;
-        padding: 10px;
-        padding-right: 7px;
-        background: transparent;
-        margin-right: -5px;
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
-
-      span {
-        transition: all 0.2s ease-in-out;
-        width: 30px;
-        height: 5px;
-        border-radius: 5px;
-        background-color: white;
-        border: none;
-      }
-    }
-  }
-
-  .menu {
-    background-color: #ebff00;
-    width: 100%;
-    height: 100vh;
-
-    ul {
-      padding: 0;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 40px;
-      margin-top: -43px;
-
-      li {
-        list-style: none;
-
-        a {
-          color: #000;
-          font-family: 'Jolly Lodger', system-ui;
-          font-weight: 400;
-          font-style: normal;
-          font-size: 3rem;
-        }
-      }
-    }
-  }
-}
-
 header {
   min-height: 100vh;
   background: url('../assets/images/coin_background.jpg') center left / cover
@@ -106,6 +13,112 @@ header {
   justify-content: center;
   align-items: center;
   color: #fff;
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 1;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .mobile-nav {
+      display: flex;
+      align-items: center;
+      position: relative;
+      background-color: #000;
+      padding: 1px 0;
+      height: 46px;
+
+      .logo {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-family: 'Jolly Lodger', system-ui;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+      }
+
+      .nav-hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 10;
+
+        button {
+          border: none;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          padding-bottom: 0;
+          padding: 10px;
+          padding-right: 7px;
+          background: transparent;
+          margin-right: -5px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        span {
+          transition: all 0.2s ease-in-out;
+          width: 30px;
+          height: 5px;
+          border-radius: 5px;
+          background-color: white;
+          border: none;
+        }
+
+        .top-span {
+          transition: all 0.2s ease-in-out;
+          transform-origin: bottom;
+          transform: rotatez(45deg) translate(4px, 2px);
+        }
+
+        .bottom-span {
+          transition: all 0.2s ease-in-out;
+          transform-origin: top;
+          transform: rotatez(-45deg) translate(2.9px, -1px);
+        }
+      }
+    }
+
+    .menu {
+      background-color: #ebff00;
+      width: 100%;
+      height: 100vh;
+
+      ul {
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: -43px;
+
+        li {
+          list-style: none;
+
+          a {
+            color: #000;
+            font-family: 'Jolly Lodger', system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
 
   .text-overlay {
     width: 75vw;
